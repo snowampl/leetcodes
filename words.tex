@@ -1,0 +1,744 @@
+% !TEX encoding = UTF-8 Unicode
+% words.py
+\documentclass[letterpaper]{article}
+\usepackage{geometry}
+\usepackage[absolute]{textpos}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage{relsize}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\usepackage{calc}
+
+\geometry{left=1cm, right=0cm}
+\tikzset{fontscale/.style = {font=\relsize{#1}}}
+
+
+
+\newcommand{\drawothers}[3]{
+\node (txt) at (1, 1)[fontscale=1, color = black] {#1};
+\node(txt) at (1, 0) [fontscale=0.5, color = black]{#2};
+\node(fig1) at(-1.5,0){\includegraphics[width=2cm]{#3}};
+\node(fig2) at (0, -2.5){\includegraphics[width=0.6cm]{/Users/lxb/Documents/yyc/latex/gmbrothers.png}};
+
+}
+
+\newcommand{\drawnewtext}[13]{
+\node(txt) at (#1, #2)[fontscale=1, color=black, rotate=#3]{#4};
+\node(txt) at(#5, #6)[fontscale=1, color=black, rotate=#7]{#8};
+\node(txt) at(#9,#10)[fontscale=1, color=black, rotate=#11]{#12}
+\node(fig1) at(0,0){\includegraphics[width=2cm]{#13}};
+
+}
+
+
+
+
+
+
+\newcommand{\drawcircle}[4]{
+ 
+\filldraw[fill=#1] (0,0) circle [radius=2.5cm];
+\node (txt) at (0, 1.5)[fontscale=0.5, color = black] {#2};
+\node(txt) at (0, 0.5) [fontscale=0.5, color = black]{#3};
+\node(fig1) at(0,-1){\includegraphics[width=1.6cm]{#4}};
+\node(fig2) at (2, 0){\includegraphics[width=0.6cm]{/Users/lxb/Documents/yyc/latex/gmbrothers.png}};
+
+
+ }
+
+\newcommand{\drawsquare}[4]{
+
+ \node (rect) at (0, 0) [draw, minimum width = 8cm, minimum height=6cm, fill= #1, rounded corners=15pt]{};
+\node (txt) at (0.5, 1)[fontscale=2, color = black] {#2};
+\node(txt) at (0.5, -1) [fontscale=2, color = black]{#3};
+\node(fig1) at(-2.5,0){\includegraphics[width=3cm]{#4}};
+\node(fig2) at (3, -2.3){\includegraphics[width=1cm]{/Users/lxb/Documents/yyc/latex/gmbrothers.png}};
+
+
+ }
+
+
+\begin{document}
+
+\textblockorigin{1cm}{1cm}
+\thispagestyle{empty}
+\begin{textblock*}{7cm}(3.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=red!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=red!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=red!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=red!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=red!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=red!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=red!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{April}{四月}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring1.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=blue!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=blue!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=blue!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=blue!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=blue!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=blue!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=blue!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{Easter}{复活节}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring10.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=yellow!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=yellow!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=yellow!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=yellow!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=yellow!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=yellow!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=yellow!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{June}{六月}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring12.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=green!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=green!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=green!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=green!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=green!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=green!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=green!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{March}{三月}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring13.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=pink!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=pink!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=pink!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=pink!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=pink!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=pink!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=pink!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{May}{五月}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring15.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=orange!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=orange!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=orange!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=orange!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=orange!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=orange!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=orange!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{baby animals}{幼小的动物}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring16.png}
+\end{tikzpicture}
+\end{textblock*}
+\null\newpage
+\textblockorigin{1cm}{1cm}
+\thispagestyle{empty}
+\begin{textblock*}{7cm}(3.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=red!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=red!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=red!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=red!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=red!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=red!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=red!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{baseball}{棒球}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring18.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=blue!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=blue!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=blue!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=blue!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=blue!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=blue!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=blue!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{birth}{出生}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring2.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=yellow!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=yellow!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=yellow!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=yellow!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=yellow!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=yellow!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=yellow!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{bloom}{开花}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring20.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=green!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=green!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=green!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=green!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=green!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=green!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=green!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{blossom}{开花时期}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring21.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=pink!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=pink!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=pink!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=pink!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=pink!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=pink!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=pink!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{born}{出生}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring22.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=orange!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=orange!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=orange!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=orange!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=orange!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=orange!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=orange!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{breeze}{微风}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring3.png}
+\end{tikzpicture}
+\end{textblock*}
+\null\newpage
+\textblockorigin{1cm}{1cm}
+\thispagestyle{empty}
+\begin{textblock*}{7cm}(3.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=red!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=red!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=red!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=red!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=red!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=red!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=red!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{bud}{蓓蕾}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring33.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=blue!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=blue!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=blue!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=blue!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=blue!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=blue!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=blue!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{bulb}{植物的球茎}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring34.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=yellow!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=yellow!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=yellow!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=yellow!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=yellow!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=yellow!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=yellow!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{bunny}{兔子}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring35.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=green!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=green!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=green!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=green!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=green!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=green!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=green!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{butterfly}{蝴蝶}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring36.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=pink!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=pink!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=pink!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=pink!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=pink!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=pink!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=pink!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{chick}{小鸡，小鸟}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring37.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=orange!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=orange!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=orange!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=orange!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=orange!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=orange!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=orange!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{eggs}{蛋}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring38.png}
+\end{tikzpicture}
+\end{textblock*}
+\null\newpage
+\textblockorigin{1cm}{1cm}
+\thispagestyle{empty}
+\begin{textblock*}{7cm}(3.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=red!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=red!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=red!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=red!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=red!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=red!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=red!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{flower}{花}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring39.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=blue!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=blue!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=blue!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=blue!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=blue!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=blue!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=blue!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{foal}{小马驹}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring4.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=yellow!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=yellow!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=yellow!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=yellow!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=yellow!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=yellow!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=yellow!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{galoshes}{雨天用的胶鞋}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring5.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=green!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=green!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=green!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=green!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=green!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=green!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=green!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{grass}{草}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring6.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=pink!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=pink!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=pink!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=pink!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=pink!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=pink!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=pink!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{green}{绿色}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring9.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=orange!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=orange!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=orange!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=orange!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=orange!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=orange!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=orange!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{grow}{生长}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring1.png}
+\end{tikzpicture}
+\end{textblock*}
+\null\newpage
+\textblockorigin{1cm}{1cm}
+\thispagestyle{empty}
+\begin{textblock*}{7cm}(3.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=red!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=red!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=red!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=red!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=red!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=red!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=red!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{hatch}{孵化}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring10.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=blue!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=blue!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=blue!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=blue!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=blue!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=blue!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=blue!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{kid (baby goat)}{孩子，小羊}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring12.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=yellow!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=yellow!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=yellow!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=yellow!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=yellow!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=yellow!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=yellow!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{lamb}{羊羔}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring13.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=green!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=green!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=green!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=green!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=green!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=green!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=green!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{life cycle}{生命循环}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring15.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=pink!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=pink!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=pink!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=pink!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=pink!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=pink!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=pink!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{melt}{融化}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring16.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=orange!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=orange!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=orange!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=orange!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=orange!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=orange!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=orange!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{nest}{鸟巢}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring18.png}
+\end{tikzpicture}
+\end{textblock*}
+\null\newpage
+\textblockorigin{1cm}{1cm}
+\thispagestyle{empty}
+\begin{textblock*}{7cm}(3.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=red!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=red!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=red!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=red!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=red!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=red!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=red!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{polliwog}{蝌蚪}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring2.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=blue!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=blue!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=blue!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=blue!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=blue!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=blue!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=blue!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{puddles}{小水坑}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring20.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=yellow!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=yellow!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=yellow!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=yellow!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=yellow!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=yellow!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=yellow!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{rabbit}{兔子}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring21.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=green!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=green!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=green!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=green!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=green!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=green!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=green!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{rain}{雨}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring22.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=pink!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=pink!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=pink!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=pink!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=pink!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=pink!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=pink!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{rainbow}{彩虹}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring3.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=orange!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=orange!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=orange!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=orange!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=orange!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=orange!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=orange!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{raincoat}{雨衣}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring33.png}
+\end{tikzpicture}
+\end{textblock*}
+\null\newpage
+\textblockorigin{1cm}{1cm}
+\thispagestyle{empty}
+\begin{textblock*}{7cm}(3.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=red!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=red!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=red!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=red!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=red!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=red!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=red!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{rebirth}{重生}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring34.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=blue!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=blue!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=blue!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=blue!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=blue!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=blue!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=blue!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{robin}{知更鸟}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring35.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=yellow!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=yellow!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=yellow!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=yellow!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=yellow!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=yellow!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=yellow!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{season}{季节}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring36.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=green!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=green!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=green!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=green!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=green!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=green!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=green!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{showers}{阵雨}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring37.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=pink!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=pink!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=pink!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=pink!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=pink!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=pink!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=pink!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{slicker}{雨衣}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring38.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=orange!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=orange!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=orange!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=orange!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=orange!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=orange!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=orange!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{spring}{春天}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring39.png}
+\end{tikzpicture}
+\end{textblock*}
+\null\newpage
+\textblockorigin{1cm}{1cm}
+\thispagestyle{empty}
+\begin{textblock*}{7cm}(3.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=red!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=red!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=red!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=red!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=red!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=red!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=red!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{spring break}{春假}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring4.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=blue!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=blue!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=blue!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=blue!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=blue!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=blue!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=blue!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{spring cleaning}{春季扫除}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring5.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=yellow!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=yellow!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=yellow!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=yellow!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=yellow!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=yellow!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=yellow!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{sprout}{发芽，抽芽}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring6.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=green!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=green!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=green!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=green!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=green!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=green!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=green!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{sunshine}{阳光}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring9.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=pink!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=pink!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=pink!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=pink!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=pink!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=pink!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=pink!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{tadpole}{蝌蚪}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring1.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=orange!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=orange!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=orange!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=orange!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=orange!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=orange!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=orange!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{thaw}{融化}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring10.png}
+\end{tikzpicture}
+\end{textblock*}
+\null\newpage
+\textblockorigin{1cm}{1cm}
+\thispagestyle{empty}
+\begin{textblock*}{7cm}(3.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=red!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=red!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=red!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=red!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=red!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=red!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=red!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{umbrella}{雨伞}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring12.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,3.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=blue!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=blue!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=blue!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=blue!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=blue!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=blue!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=blue!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{vernal equinox}{春分}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring13.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=yellow!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=yellow!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=yellow!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=yellow!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=yellow!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=yellow!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=yellow!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{warming}{温暖}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring15.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,11.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=green!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=green!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=green!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=green!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=green!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=green!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=green!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{weather}{天气}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring16.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(3.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=pink!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=pink!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=pink!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=pink!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=pink!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=pink!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=pink!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{windy}{有风的}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring18.png}
+\end{tikzpicture}
+\end{textblock*}
+\begin{textblock*}{7cm}(12.5cm,19.5cm)
+\begin{tikzpicture}[overlay]
+\fill[fill=orange!10](1.39,2.40) --(-1.39,2.40) --(-2.77,0.00) --(-1.39,-2.40) --(1.39,-2.40) --(2.77,-0.00) --cycle;
+\filldraw[fill=orange!10](1.39,2.40) arc (30.00:150.00:1.60);
+\filldraw[fill=orange!10](-1.39,2.40) arc (90.00:210.00:1.60);
+\filldraw[fill=orange!10](-2.77,0.00) arc (150.00:270.00:1.60);
+\filldraw[fill=orange!10](-1.39,-2.40) arc (210.00:330.00:1.60);
+\filldraw[fill=orange!10](1.39,-2.40) arc (270.00:390.00:1.60);
+\filldraw[fill=orange!10](2.77,-0.00) arc (330.00:450.00:1.60);
+\drawothers{worm}{虫子}{/Users/lxb/Documents/yyc/scripts/spring/springtopic/spring2.png}
+\end{tikzpicture}
+\end{textblock*}
+
+
+
+
+\end{document}
